@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Claims</title>
+  </head>
+  <body>
+    <div class="bg-zinc-50 flex flex-row h-screen">
+      <!-- Side Bar -->
+      <div
+        class="w-72 border-r border-gray-200 bg-white p-6 flex flex-col gap-6"
+      >
+        <!-- Logo-->
+        <div>
+          <p class="text-2xl text-green-800 font-black">MediCore</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="flex flex-col gap-4 flex-1">
+          <a
+            href="index.html"
+            class="flex flex-row gap-2 hover:bg-green-50 hover:rounded-lg hover:font-medium hover:cursor-pointer py-2 px-4"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"
+              />
+            </svg>
+            Dashboard</a
+          >
+
+          <div
+            class="flex items-center justify-between bg-green-100 rounded-lg py-2 px-4 text-green-950 font-medium py-2 px-4"
+          >
+            <a
+              href="claims.html"
+              class="flex flex-row gap-2 text-green-950 font-medium"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
+                />
+              </svg>
+              Claims</a
+            >
+            <span class="text-xs px-3 py-1 bg-green-600 text-white rounded-full"
+              >12</span
+            >
+          </div>
+
+          <a
+            class="flex flex-row gap-2 hover:bg-green-50 hover:rounded-lg hover:font-medium hover:cursor-pointer py-2 px-4 text-gray-700"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"
+              />
+            </svg>
+            Membership</a
+          >
+          <a
+            class="flex flex-row gap-2 hover:bg-green-50 hover:rounded-lg hover:font-medium hover:cursor-pointer py-2 px-4 text-gray-700"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819"
+              />
+            </svg>
+            Providers</a
+          >
+        </div>
+
+        <!-- Profile -->
+        <div class="flex flex-row gap-4">
+          <img
+            class="w-10 h-10 rounded-full object-cover"
+            src="./profile.jpg"
+            alt=""
+          />
+          <div>
+            <p class="text-xl font-semibold text-gray-700">Erica Matata</p>
+            <p class="text-md text-gray-600 font-medium">Product Designer</p>
+            <p
+              class="text-sm text-gray-500 font-normal flex items-center gap-2"
+            >
+              Online<span
+                class="w-2 h-2 bg-green-400 rounded-full shrink-0"
+              ></span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+
+      <div class="flex-1 overflow-y-auto">
+        <!-- Top Navigation Bar -->
+        <nav
+          class="h-[80px] bg-white w-full p-4 flex justify-between items-center border-b border-gray-200 shadow-md shadow-green-50/2"
+        >
+          <h1 class="text-2xl font-semibold text-green-950">Claim Details</h1>
+        </nav>
+        <!-- End of NavBar -->
+
+        <main class="p-6 space-y-6">
+          <a
+            href="claims.html"
+            class="inline-flex items-center gap-2 text-green-600 hover:text-green-700"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"
+              />
+            </svg>
+
+            <span class="text-base font-medium">Back to Claims</span>
+          </a>
+
+          <!-- Claim Header -->
+
+          <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
+            <div class="flex justify-between items-start">
+              <h2 class="text-2xl font-semibold text-gray-900">
+                Claim #CLM-10245
+              </h2>
+              <span
+                class="inline-flex items-center gap-2 rounded-full bg-green-100 px-3 py-1.5 text-sm font-medium text-green-700"
+              >
+                <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                Approved
+              </span>
+            </div>
+
+            <p class="mt-2 text-lg font-medium text-gray-700">John Mwangi</p>
+            <p class="mt-1 text-sm font-normal text-gray-500">
+              Submitted on 22 July 2026
+            </p>
+          </div>
+
+          <!-- End of Claim Header -->
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Patient Card -->
+            <div
+              class="bg-white rounded-xl border border-gray-200 shadow-sm p-6"
+            >
+              <h2 class="text-xl font-semibold text-gray-800 mb-6">
+                Patient Information
+              </h2>
+
+              <div class="space-y-5">
+                <div>
+                  <p class="text-sm text-gray-500">Member Number</p>
+                  <p class="mt-1 text-base font-medium text-gray-800">
+                    30827636-00
+                  </p>
+                </div>
+
+                <div>
+                  <p class="text-sm text-gray-500">Date of Birth</p>
+                  <p class="mt-1 text-base font-medium text-gray-800">
+                    30 June 1995
+                  </p>
+                </div>
+
+                <div>
+                  <p class="text-sm text-gray-500">Phone Number</p>
+                  <p class="mt-1 text-base font-medium text-gray-800">
+                    0712 345 678
+                  </p>
+                </div>
+
+                <div>
+                  <p class="text-sm text-gray-500">Email Address</p>
+                  <p class="mt-1 text-base font-medium text-gray-800">
+                    johnmwangi@gmail.com
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Claim Card -->
+
+            <div
+              class="bg-white rounded-xl border border-gray-200 shadow-sm p-6"
+            >
+              <h2 class="text-xl font-semibold text-gray-800 mb-6">
+                Claim Information
+              </h2>
+
+              <div class="space-y-5">
+                <div>
+                  <p class="text-sm text-gray-500">Hospital</p>
+                  <p class="mt-1 text-base font-medium text-gray-800">
+                    Nairobi Hospital
+                  </p>
+                </div>
+
+                <div>
+                  <p class="text-sm text-gray-500">Claim Amount</p>
+                  <p class="mt-1 text-base font-medium text-gray-800">
+                    KES 12,500
+                  </p>
+                </div>
+
+                <div>
+                  <p class="text-sm text-gray-500">Diagnosis</p>
+                  <p class="mt-1 text-base font-medium text-gray-800">
+                    Malaria
+                  </p>
+                </div>
+
+                <div>
+                  <p class="text-sm text-gray-500">Date of Service</p>
+                  <p class="mt-1 text-base font-medium text-gray-800">
+                    21 July 2026
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Provider Card-->
+
+            <div
+              class="bg-white rounded-xl border border-gray-200 shadow-sm p-6"
+            >
+              <h2 class="text-xl font-semibold text-gray-800 mb-6">
+                Provider Information
+              </h2>
+
+              <div class="space-y-5">
+                <div>
+                  <p class="text-sm text-gray-500">Hospital</p>
+                  <p class="mt-1 text-base font-medium text-gray-800">
+                    Nairobi Hospital
+                  </p>
+                </div>
+
+                <div>
+                  <p class="text-sm text-gray-500">Department</p>
+                  <p class="mt-1 text-base font-medium text-gray-800">
+                    Outpatient
+                  </p>
+                </div>
+
+                <div>
+                  <p class="text-sm text-gray-500">Attending Doctor</p>
+                  <p class="mt-1 text-base font-medium text-gray-800">
+                    Dr. Grace Wanjiku
+                  </p>
+                </div>
+
+                <div>
+                  <p class="text-sm text-gray-500">Provider Code</p>
+                  <p class="mt-1 text-base font-medium text-gray-800">
+                    PRV-2045
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment Card-->
+
+            <div
+              class="bg-white rounded-xl border border-gray-200 shadow-sm p-6"
+            >
+              <h2 class="text-xl font-semibold text-gray-800 mb-6">
+                Payment Information
+              </h2>
+
+              <div class="space-y-5">
+                <div>
+                  <p class="text-sm text-gray-500">Covered Amount</p>
+                  <p class="mt-1 text-base font-medium text-gray-800">
+                    KES 10,500
+                  </p>
+                </div>
+
+                <div>
+                  <p class="text-sm text-gray-500">Member Contribution</p>
+                  <p class="mt-1 text-base font-medium text-gray-800">
+                    KES 2,000
+                  </p>
+                </div>
+
+                <div>
+                  <p class="text-sm text-gray-500">Payment Status</p>
+                  <span
+                    class="inline-flex items-center gap-2 rounded-full bg-yellow-100 px-3 py-1 text-xs font-medium text-yellow-700"
+                  >
+                    <span class="w-2 h-2 rounded-full bg-yellow-500"></span>
+                    Pending
+                  </span>
+                </div>
+
+                <div>
+                  <p class="text-sm text-gray-500">Payment Method</p>
+                  <p class="mt-1 text-base font-medium text-gray-800">
+                    Bank Transfer
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Treatment Details -->
+          <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
+            <!-- Header -->
+            <div class="mb-6">
+              <h2 class="text-xl font-semibold text-gray-800">
+                Treatment Details
+              </h2>
+              <p class="mt-1 text-sm text-gray-500">
+                Services provided during the patient's visit.
+              </p>
+            </div>
+
+            <!-- Table -->
+            <div class="overflow-x-auto rounded-lg border border-gray-200">
+              <table class="w-full">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wide"
+                    >
+                      Service
+                    </th>
+
+                    <th
+                      class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wide"
+                    >
+                      Description
+                    </th>
+
+                    <th
+                      class="px-6 py-3 text-center text-xs font-semibold text-gray-500 uppercase tracking-wide"
+                    >
+                      Qty
+                    </th>
+
+                    <th
+                      class="px-6 py-3 text-right text-xs font-semibold text-gray-500 uppercase tracking-wide"
+                    >
+                      Amount
+                    </th>
+                  </tr>
+                </thead>
+
+                <tbody class="divide-y divide-gray-100">
+                  <tr class="hover:bg-gray-50 transition-colors">
+                    <td class="px-6 py-4 text-sm font-medium text-gray-900">
+                      Consultation
+                    </td>
+
+                    <td class="px-6 py-4 text-sm text-gray-600">
+                      General outpatient consultation
+                    </td>
+
+                    <td class="px-6 py-4 text-sm text-center text-gray-700">
+                      1
+                    </td>
+
+                    <td
+                      class="px-6 py-4 text-sm font-medium text-right text-gray-900"
+                    >
+                      KES 2,000
+                    </td>
+                  </tr>
+
+                  <tr class="hover:bg-gray-50 transition-colors">
+                    <td class="px-6 py-4 text-sm font-medium text-gray-900">
+                      Laboratory Test
+                    </td>
+
+                    <td class="px-6 py-4 text-sm text-gray-600">
+                      Malaria Blood Test
+                    </td>
+
+                    <td class="px-6 py-4 text-sm text-center text-gray-700">
+                      1
+                    </td>
+
+                    <td
+                      class="px-6 py-4 text-sm font-medium text-right text-gray-900"
+                    >
+                      KES 3,500
+                    </td>
+                  </tr>
+
+                  <tr class="hover:bg-gray-50 transition-colors">
+                    <td class="px-6 py-4 text-sm font-medium text-gray-900">
+                      Medication
+                    </td>
+
+                    <td class="px-6 py-4 text-sm text-gray-600">
+                      Coartem Tablets (20/120mg)
+                    </td>
+
+                    <td class="px-6 py-4 text-sm text-center text-gray-700">
+                      1
+                    </td>
+
+                    <td
+                      class="px-6 py-4 text-sm font-medium text-right text-gray-900"
+                    >
+                      KES 7,000
+                    </td>
+                  </tr>
+                </tbody>
+
+                <!-- Total -->
+
+                <tfoot class="bg-gray-50 border-t border-gray-200">
+                  <tr>
+                    <td
+                      colspan="3"
+                      class="px-6 py-4 text-right text-sm font-semibold text-gray-700"
+                    >
+                      Total Claim Amount
+                    </td>
+
+                    <td
+                      class="px-6 py-4 text-right text-lg font-bold text-gray-900"
+                    >
+                      KES 12,500
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+
+          <!-- Supporting Documents -->
+          <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-6">
+              Supporting Documents
+            </h2>
+
+            <!-- Document 1 -->
+            <div
+              class="flex items-center justify-between py-4 border-b border-gray-100"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-5 text-green-600"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
+                    />
+                  </svg>
+                </div>
+
+                <div>
+                  <p class="text-sm font-medium text-gray-900">
+                    Admission Letter.pdf
+                  </p>
+
+                  <div
+                    class="flex items-center gap-2 mt-1 text-xs text-gray-500"
+                  >
+                    <span>PDF</span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+                    <span>1.2 MB</span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+                    <span>Uploaded 22 Jul 2026</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-6">
+                <button
+                  class="text-sm font-medium text-green-600 hover:text-green-700"
+                >
+                  View
+                </button>
+                <button
+                  class="text-sm font-medium text-green-600 hover:text-green-700"
+                >
+                  Download
+                </button>
+              </div>
+            </div>
+
+            <!-- Document 2 -->
+            <div
+              class="flex items-center justify-between py-4 border-b border-gray-100"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-5 text-green-600"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
+                    />
+                  </svg>
+                </div>
+
+                <div>
+                  <p class="text-sm font-medium text-gray-900">
+                    Laboratory Results.pdf
+                  </p>
+
+                  <div
+                    class="flex items-center gap-2 mt-1 text-xs text-gray-500"
+                  >
+                    <span>PDF</span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+                    <span>845 KB</span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+                    <span>Uploaded 22 Jul 2026</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-6">
+                <button
+                  class="text-sm font-medium text-green-600 hover:text-green-700"
+                >
+                  View
+                </button>
+                <button
+                  class="text-sm font-medium text-green-600 hover:text-green-700"
+                >
+                  Download
+                </button>
+              </div>
+            </div>
+
+            <!-- Document 3 -->
+            <div class="flex items-center justify-between py-4">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-5 text-green-600"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
+                    />
+                  </svg>
+                </div>
+
+                <div>
+                  <p class="text-sm font-medium text-gray-900">
+                    Prescription.pdf
+                  </p>
+
+                  <div
+                    class="flex items-center gap-2 mt-1 text-xs text-gray-500"
+                  >
+                    <span>PDF</span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+                    <span>420 KB</span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+                    <span>Uploaded 22 Jul 2026</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-6">
+                <button
+                  class="text-sm font-medium text-green-600 hover:text-green-700"
+                >
+                  View
+                </button>
+                <button
+                  class="text-sm font-medium text-green-600 hover:text-green-700"
+                >
+                  Download
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+         <!-- Claim Progress -->
+<div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
+
+  <div class="mb-6">
+    <h2 class="text-xl font-semibold text-gray-800">
+      Claim Progress
+    </h2>
+
+    <p class="mt-1 text-sm text-gray-500">
+      Track the status of this claim from submission to payment.
+    </p>
+  </div>
+
+  <div class="space-y-0">
+
+    <!-- Step 1 -->
+    <div class="flex gap-4">
+
+      <div class="flex flex-col items-center">
+        <span class="w-3 h-3 rounded-full bg-green-500"></span>
+        <div class="w-px flex-1 bg-gray-200 mt-2"></div>
+      </div>
+
+      <div class="pb-8">
+        <h3 class="text-base font-medium text-gray-900">
+          Claim Submitted
+        </h3>
+        <p class="mt-1 text-sm text-gray-500">
+          22 Jul 2026 • 09:14 AM
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Step 2 -->
+    <div class="flex gap-4">
+
+      <div class="flex flex-col items-center">
+        <span class="w-3 h-3 rounded-full bg-green-500"></span>
+        <div class="w-px flex-1 bg-gray-200 mt-2"></div>
+      </div>
+
+      <div class="pb-8">
+        <h3 class="text-base font-medium text-gray-900">
+          Documents Verified
+        </h3>
+        <p class="mt-1 text-sm text-gray-500">
+          22 Jul 2026 • 10:26 AM
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Step 3 -->
+    <div class="flex gap-4">
+
+      <div class="flex flex-col items-center">
+        <span class="w-3 h-3 rounded-full bg-green-500"></span>
+        <div class="w-px flex-1 bg-gray-200 mt-2"></div>
+      </div>
+
+      <div class="pb-8">
+        <h3 class="text-base font-medium text-gray-900">
+          Medical Review Completed
+        </h3>
+        <p class="mt-1 text-sm text-gray-500">
+          23 Jul 2026 • 02:05 PM
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Current Step -->
+    <div class="flex gap-4">
+
+      <div class="flex flex-col items-center">
+        <span class="w-3 h-3 rounded-full bg-yellow-400 ring-4 ring-yellow-100"></span>
+        <div class="w-px flex-1 bg-gray-200 mt-2"></div>
+      </div>
+
+      <div class="pb-8">
+        <h3 class="text-base font-medium text-gray-900">
+          Payment Processing
+        </h3>
+        <p class="mt-1 text-sm text-gray-500">
+          24 Jul 2026 • 08:40 AM
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Final Step -->
+    <div class="flex gap-4">
+
+      <div class="flex flex-col items-center">
+        <span class="w-3 h-3 rounded-full border-2 border-gray-300 bg-white"></span>
+      </div>
+
+      <div>
+        <h3 class="text-base font-medium text-gray-400">
+          Payment Completed
+        </h3>
+        <p class="mt-1 text-sm text-gray-400">
+          Pending
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
